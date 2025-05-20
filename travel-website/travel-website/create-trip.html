@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YATRA-VERSE </title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="Wanderlust Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="create-trip.html" class="active">Plan Trip</a></li>
+              
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section class="trip-planner">
+        <h1>Plan Your Dream Vacation</h1>
+        <form id="trip-form">
+            <div class="form-group">
+                <label for="destination">Destination</label>
+                    <input type="text" id="destination" placeholder="Enter destination" required>
+
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="travel-dates">Travel date</label>
+               <input type="number" id="travel-dates" placeholder="travel-dates" required>
+            </div>
+              <div class="form-group">
+                <label for="days">Travel for how many days</label>
+               <input type="number" id="days" placeholder="days" min="1" max="5" required>
+            </div>
+           
+            <div class="form-group">
+                <label for="travelers">Number of Travelers</label>
+                <input type="number" id="travelers" min="1" max="10" required>
+            </div>
+
+            <div class="form-group">
+                <label>Interests</label>
+                <div class="interests-grid">
+                    <label class="interest-option">
+                        <input type="checkbox" name="interests" value="adventure"> Adventure
+                    </label>
+                    <label class="interest-option">
+                        <input type="checkbox" name="interests" value="relaxation"> Relaxation
+                    </label>
+                    <label class="interest-option">
+                        <input type="checkbox" name="interests" value="culture"> Culture
+                    </label>
+                    <label class="interest-option">
+                        <input type="checkbox" name="interests" value="food"> Food
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="budget">Budget Range</label>
+                <select id="budget" required>
+                    <option value="">Select budget</option>
+                    <option value="economy">Economy ($500-$1000)</option>
+                    <option value="standard">Standard ($1000-$3000)</option>
+                    <option value="luxury">Luxury ($3000+)</option>
+                </select>
+            </div>
+
+            <button type="submit" class="cta-button">Create My Trip</button>
+        </form>
+    </section>
+
+    <footer>
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="./javascript/trip-form.js"></script>
+    <script src="./javascript/main.js"></script>
+</body>
+</html>
